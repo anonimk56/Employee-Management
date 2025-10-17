@@ -3,7 +3,7 @@ interface IProps {
   width?: string;
   height?: string;
 }
-const GreenDotIcon = ({ width = "19px", height = "16px" }: IProps) => {
+const GreenDotIcon = ({ width = "15px", height = "15px" }: IProps) => {
   return (
     <svg
       width={width}

@@ -1,11 +1,10 @@
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
-import { DashboardCardsData } from "../utils/Constants";
+import { DashboardCardsData } from "../../utils/Constants";
 
 const DashboardCards: React.FC = () => {
   const theme = useTheme();
 
-  // shared base styles
   const baseText = {
     fontFamily: "Rubik",
     fontWeight: 400,

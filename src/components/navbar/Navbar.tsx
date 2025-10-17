@@ -29,11 +29,12 @@ const Navbar: React.FC<NavbarProps> = ({ screen, userCount, roleCount }) => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        background: "#E5E7EB",
+        background: "#Ffffff",
         px: 3,
         py: 2,
         borderBottom: "1px solid #E5E7EB",
         boxShadow: "0px 1px 2px 0px #0000000D",
+        minHeight: "6vh",
       }}
     >
       {/* Left section */}
@@ -51,9 +52,9 @@ const Navbar: React.FC<NavbarProps> = ({ screen, userCount, roleCount }) => {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              gap: "1vw",
+              flexDirection: { xs: "column", sm: "row" }, // 👈 stack on small screens
+              alignItems: { xs: "flex-start", sm: "center" },
+              gap: { xs: "4px", sm: "1vw" }, // 👈 smaller gap when stacked
             }}
           >
             <Typography sx={titleText}>{screen}</Typography>
@@ -95,6 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ screen, userCount, roleCount }) => {
             lineHeight: "20px",
             cursor: "pointer",
             color: "#374151",
+            display: { xs: "none", sm: "block" },
           }}
         >
           Maryam Khan

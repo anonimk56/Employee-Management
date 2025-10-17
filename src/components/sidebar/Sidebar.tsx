@@ -39,10 +39,9 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ onSelect }) => {
             width: open ? drawerWidth : 70,
             boxSizing: "border-box",
             transition: "width 0.3s ease",
-            backgroundColor: "white",
+            backgroundColor: "#FFFFFF",
             color: "black",
             overflowX: "hidden",
-            // ✅ Added shadow at the border area
             boxShadow: `
               0px 10px 15px 0px #0000001A,
               0px 4px 6px 0px #0000001A
@@ -56,7 +55,7 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ onSelect }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: open ? "flex-start" : "center",
-            padding: "25px",
+            padding: "21px",
             gap: 2,
             borderBottom: "1px solid #F3F4F6",
           }}
@@ -88,7 +87,7 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ onSelect }) => {
           {SidebarItems.map((item) => (
             <ListItem key={item.id} disablePadding sx={{ display: "block" }}>
               <ListItemButton
-                onClick={() => onSelect(item.id)} // ✅ when clicked, switch screen
+                onClick={() => onSelect(item.id)}
                 sx={{
                   fontFamily: "Rubik, sans-serif",
                   minHeight: 48,
